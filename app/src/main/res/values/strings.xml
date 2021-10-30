@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">Dashboard Ui</string>
+    <string name="explore">Explore</string>
+    <string name="search_travel_places">Search Travel Places</string>
+    <string name="search">Search</string>
+    <string name="popular_choice">Popular Choice</string>
+    <string name="best_rating">Best Rating</string>
+    <string name="super_host">Super Host</string>
+</resources>

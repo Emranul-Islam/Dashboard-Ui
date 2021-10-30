@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_marginStart="@dimen/default_margin"
+            android:layout_marginEnd="@dimen/default_margin"
+            android:layout_height="wrap_content">
+
+
+            <TextView
+                android:id="@+id/greetings"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:fontFamily="@font/poppins_600"
+                android:text="@string/explore"
+                android:textColor="@color/black"
+                android:textSize="18sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <!--                <TextView-->
+            <!--                    android:id="@+id/name"-->
+            <!--                    android:layout_width="wrap_content"-->
+            <!--                    android:layout_height="wrap_content"-->
+            <!--                    android:layout_marginStart="5dp"-->
+            <!--                    android:fontFamily="@font/poppins_400"-->
+            <!--                    android:text="Sohag"-->
+            <!--                    android:textSize="@dimen/text_12"-->
+            <!--                    app:layout_constraintBottom_toBottomOf="@+id/greetings"-->
+            <!--                    app:layout_constraintStart_toEndOf="@+id/greetings" />-->
+
+            <TextView
+                android:id="@+id/textView4"
+                android:fontFamily="@font/poppins_400"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:text="@string/search_travel_places"
+                android:textSize="@dimen/text_12"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/greetings" />
+
+            <ImageView
+                android:id="@+id/btnLoved"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="16dp"
+                android:src="@drawable/ic_love"
+                app:layout_constraintBottom_toBottomOf="@+id/greetings"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/greetings" />
+
+
+            <TextView
+                android:id="@+id/searchBar"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="16dp"
+                android:background="@drawable/edit_text_bg"
+                android:drawablePadding="10dp"
+                android:fontFamily="@font/poppins_400"
+                android:text="@string/search"
+                android:textSize="@dimen/text_12"
+                app:drawableStartCompat="@drawable/ic_search"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView4" />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/default_margin_top"
+            android:orientation="horizontal">
+
+
+            <View
+                android:layout_width="5dp"
+                android:layout_height="30dp"
+                android:background="@color/orange" />
+
+            <TextView
+                android:fontFamily="@font/poppins_500"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginStart="@dimen/default_margin"
+                android:text="@string/popular_choice"
+                android:textColor="@color/orange"
+                android:textSize="@dimen/text_14" />
+        </LinearLayout>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyclerPopular"
+            android:layout_marginTop="@dimen/default_margin"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            tools:itemCount="1"
+            tools:listitem="@layout/item_explore" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/default_margin_top"
+            android:orientation="horizontal">
+
+
+            <View
+                android:layout_width="5dp"
+                android:layout_height="30dp"
+                android:background="@color/green" />
+
+            <TextView
+                android:fontFamily="@font/poppins_500"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginStart="@dimen/default_margin"
+                android:text="@string/best_rating"
+                android:textColor="@color/green"
+                android:textSize="@dimen/text_14" />
+        </LinearLayout>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyclerBestRating"
+            android:layout_marginTop="@dimen/default_margin"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            tools:itemCount="1"
+            tools:listitem="@layout/item_explore" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/default_margin_top"
+            android:orientation="horizontal">
+
+
+            <View
+                android:layout_width="5dp"
+                android:layout_height="30dp"
+                android:background="@color/blue" />
+
+            <TextView
+                android:fontFamily="@font/poppins_500"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginStart="@dimen/default_margin"
+                android:text="@string/super_host"
+                android:textColor="@color/blue"
+                android:textSize="@dimen/text_14" />
+        </LinearLayout>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyclerSuperHost"
+            android:layout_marginTop="@dimen/default_margin"
+            android:layout_marginBottom="@dimen/default_margin_top"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            tools:itemCount="1"
+            tools:listitem="@layout/item_explore" />
+    </LinearLayout>
+
+</ScrollView>
